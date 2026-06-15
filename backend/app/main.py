@@ -5,7 +5,7 @@ from typing import List, Optional
 
 from .database import engine, Base, get_db
 from .seeds import seed_database
-from . import crud, schemas, ollama_client
+from . import crud, schemas, ollama_client, models
 
 # Initialize SQLite database tables
 Base.metadata.create_all(bind=engine)

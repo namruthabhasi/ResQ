@@ -3,7 +3,7 @@ import json
 from typing import List, Dict, Optional
 
 OLLAMA_HOST = "http://localhost:11434"
-DEFAULT_MODEL = "gemma"  # Gemma model pulled locally via Ollama
+DEFAULT_MODEL = "gemma4:e2b"  # Gemma 4 model pulled locally via Ollama
 
 SYSTEM_PROMPT = """You are ResQ, an AI emergency response assistant. Your job is to help users during critical situations (floods, fires, earthquakes, cyclones, medical emergencies).
 Respond according to these rules:

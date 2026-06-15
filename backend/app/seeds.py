@@ -9,70 +9,147 @@ def seed_database(db: Session):
 
     print("Seeding database with offline resources...")
 
-    # 1. Seed Shelters
+    # 1. Seed Shelters (Re-aligned to India)
     shelters = [
         models.Shelter(
-            name="Green Valley Community Center",
-            address="102 Emerald Parkway, Sector 4",
-            capacity=150,
-            contact_number="+1-800-555-0191",
-            available_facilities="Backup Generator, Clean Water, Medical Station, Cots, Food Rations"
+            name="Delhi National Relief Camp",
+            address="IIT Delhi Ground, Hauz Khas, New Delhi (Region: North)",
+            capacity=500,
+            contact_number="+91-11-2659-1000",
+            available_facilities="Oxygen Support, High Capacity Generators, Clean Water, Medical ICU Bed, Warm Food, Flood Rescue, Earthquake Relief"
         ),
         models.Shelter(
-            name="Central High School Gymnasium",
-            address="450 Education Way, Downtown",
-            capacity=400,
-            contact_number="+1-800-555-0192",
-            available_facilities="Clean Water, Restrooms, First Aid Kit, Solar Power Charging"
+            name="Dehradun Community Safe House",
+            address="Rajpur Road Community Center, Dehradun, Uttarakhand (Region: North)",
+            capacity=200,
+            contact_number="+91-135-274-4001",
+            available_facilities="Seismic Safety Structures, First Aid Kits, Power Generators, Sleeping Bags, Earthquake Relief"
         ),
         models.Shelter(
-            name="St. Jude Church Hall",
-            address="78 Grace Boulevard",
+            name="Shimla Shelter Outpost",
+            address="Mall Road Emergency Station, Shimla, Himachal Pradesh (Region: North)",
             capacity=80,
-            contact_number="+1-800-555-0193",
-            available_facilities="Food Rations, Cots, Pet Friendly Area, Clean Water"
+            contact_number="+91-177-265-2002",
+            available_facilities="Thermal Blankets, Dry Rations, Emergency VHF Radio Command, Storm Relief"
         ),
         models.Shelter(
-            name="Westside Municipal Arena",
-            address="12 Stadium Drive, West District",
+            name="Chennai Coastal Shelter",
+            address="Marina Beach Ground Camp, Triplicane, Chennai, Tamil Nadu (Region: South)",
             capacity=600,
-            contact_number="+1-800-555-0194",
-            available_facilities="Backup Generator, Heliport Access, Mobile Clinic, Restrooms, Emergency Blankets"
+            contact_number="+91-44-2538-4500",
+            available_facilities="Life Jackets, Inflatable Rescue Boats, Medical Ward, Solar Chargers, Flood Rescue, Storm Relief"
         ),
+        models.Shelter(
+            name="Kerala Community Relief Center",
+            address="Kochi Port Trust Building, Willingdon Island, Kochi, Kerala (Region: South)",
+            capacity=300,
+            contact_number="+91-484-266-6639",
+            available_facilities="Heavy Drainage Pumps, Clean Drinking Water, Essential Medicine, Packaged Food, Flood Rescue, Storm Relief"
+        ),
+        models.Shelter(
+            name="HAL Bengaluru Gymnasium",
+            address="HAL Sports Complex, Old Airport Road, Bengaluru, Karnataka (Region: South)",
+            capacity=400,
+            contact_number="+91-80-2521-1234",
+            available_facilities="Smoke Exhaust Systems, Fire Blankets, Burn Treatment Ward, Cots, Charging Hub, Fire Safety"
+        ),
+        models.Shelter(
+            name="Salt Lake Stadium Relief Camp",
+            address="Salt Lake Stadium Block C, Sector III, Kolkata, West Bengal (Region: East)",
+            capacity=1000,
+            contact_number="+91-33-2335-1234",
+            available_facilities="Mass Kitchen, Medical Dispensary, Restrooms, Drinking Water Filtration System, Flood Rescue, Cyclone Relief"
+        ),
+        models.Shelter(
+            name="Odisha Multi-Disaster Shelter",
+            address="Kalinga Stadium Area, Nayapalli, Bhubaneswar, Odisha (Region: East)",
+            capacity=800,
+            contact_number="+91-674-253-0800",
+            available_facilities="Cyclone-Resistant Building, Emergency Beacon, Clean Water, Solar Microgrid, Cyclone Relief, Storm Relief"
+        ),
+        models.Shelter(
+            name="Guwahati Relief Terminal",
+            address="ISBT Bypass Road Terminal, Guwahati, Assam (Region: East)",
+            capacity=250,
+            contact_number="+91-361-233-4003",
+            available_facilities="First Aid Station, Essential Groceries, Warm Beds, Satellite Phone Link, Earthquake Relief, Flood Rescue"
+        ),
+        models.Shelter(
+            name="Mumbai Municipal Sports Complex",
+            address="Dharavi Sports Complex, Sion Link Road, Mumbai, Maharashtra (Region: West)",
+            capacity=600,
+            contact_number="+91-22-2281-1234",
+            available_facilities="High Capacity Water Evac Pumps, Solar Batteries, Inflatable Cots, Packaged Food, Flood Rescue, Storm Relief"
+        ),
+        models.Shelter(
+            name="Ahmedabad Earthquake Relief Camp",
+            address="Gandhi Ashram Community Center, Sabarmati, Ahmedabad, Gujarat (Region: West)",
+            capacity=500,
+            contact_number="+91-79-2755-1234",
+            available_facilities="Reinforced Open Shelters, Mobile Clinic, Dry Food Rations, Blankets, Earthquake Relief"
+        ),
+        models.Shelter(
+            name="Pune Fire Response Base",
+            address="Shivajinagar Municipal Hall, Pune, Maharashtra (Region: West)",
+            capacity=150,
+            contact_number="+91-20-2550-1234",
+            available_facilities="Oxygen Regulators, Emergency Showers, Burn First Aid Dressing Kits, Fire Safety"
+        ),
+        models.Shelter(
+            name="Nagpur Central Transit Shelter",
+            address="Railway Stadium Ground, Civil Lines, Nagpur, Maharashtra (Region: Central)",
+            capacity=300,
+            contact_number="+91-712-256-1234",
+            available_facilities="Seismic Rescue Tools, Emergency Blankets, Essential Medicines, Rations Depot, Earthquake Relief"
+        ),
+        models.Shelter(
+            name="Bhopal Gas & Fire Safety Center",
+            address="Arera Colony Community Hall, Bhopal, Madhya Pradesh (Region: Central)",
+            capacity=300,
+            contact_number="+91-755-246-1234",
+            available_facilities="Respiratory Support Kits, Portable Ventilators, First Aid Ward, Drinking Water, Fire Safety"
+        ),
+        models.Shelter(
+            name="Raipur Storm Shelter",
+            address="Naya Raipur Sector 12 Relief Center, Raipur, Chhattisgarh (Region: Central)",
+            capacity=100,
+            contact_number="+91-771-251-1234",
+            available_facilities="Reinforced Roofing, Clean Drinking Water, Emergency Power Supplies, Storm Relief"
+        )
     ]
     db.bulk_save_objects(shelters)
 
-    # 2. Seed Emergency Contacts
+    # 2. Seed Emergency Contacts (Re-aligned to India)
     contacts = [
         models.EmergencyContact(
-            name="National Disaster Management Response",
-            role="National Emergency Coordination",
-            phone_number="911",
-            organization="Federal Emergency Agency"
+            name="National Disaster Response Force (NDRF)",
+            role="Disaster Rescue & Evacuation",
+            phone_number="1078",
+            organization="NDMA India"
         ),
         models.EmergencyContact(
-            name="Metropolitan Fire Command",
-            role="Fire & Rescue Operations",
-            phone_number="999",
-            organization="Municipal Fire Service"
+            name="National Integrated Emergency Help",
+            role="Primary Emergency Helpline",
+            phone_number="112",
+            organization="Govt of India"
         ),
         models.EmergencyContact(
-            name="Red Cross Emergency Medical Dispatch",
-            role="First Aid & Shelter Assistance",
-            phone_number="+1-800-733-2767",
-            organization="International Red Cross"
+            name="Indian Red Cross Society",
+            role="First Aid & Humanitarian Relief",
+            phone_number="+91-11-2371-6441",
+            organization="Red Cross India"
         ),
         models.EmergencyContact(
-            name="Search & Rescue Canine Division",
-            role="Missing Persons Recovery",
-            phone_number="+1-800-555-0110",
-            organization="State Search & Rescue Office"
+            name="Fire Response Dispatch (State)",
+            role="Fire Fighting & Special Rescue",
+            phone_number="101",
+            organization="State Fire Authorities"
         ),
         models.EmergencyContact(
-            name="Coast Guard Emergency Operations",
-            role="Flood & Water Rescue",
-            phone_number="+1-800-555-0220",
-            organization="National Coast Guard"
+            name="Medical Emergency Response (State)",
+            role="Ambulance & Trauma Support",
+            phone_number="102",
+            organization="State Health Services"
         )
     ]
     db.bulk_save_objects(contacts)
