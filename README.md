@@ -233,7 +233,7 @@ By combining local AI with disaster preparedness resources, the system helps com
 
 **Namrutha Bhasi**
 
-B.Tech Artificial Intelligence and Machine Learning
+B.Tech CSE(Artificial Intelligence and Machine Learning)
 
 Sree Buddha College of Engineering
 
